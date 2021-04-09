@@ -1,4 +1,6 @@
 import { Component, Input, OnInit  } from '@angular/core';
+import { Info } from '../info';
+import { ChoicesService } from '../choices.service';
 
 @Component({
   selector: 'app-button',
@@ -7,10 +9,16 @@ import { Component, Input, OnInit  } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() options?: object;
-  constructor() { }
+  selectedOption?: Info;
+
+  constructor(private choicesService: ChoicesService) {}
 
   ngOnInit(): void {
-    console.log(this.options)
+  }
+
+  onSelect(option: Info): void {
+    this.selectedOption = option;
+    this.choicesService.add(option.id);
   }
 
 }

@@ -1,7 +1,7 @@
 import { Info } from './info';
 
 export const ABILITIES: Info[] = [
-  {id: 1, str: 'Beginner' },
-  {id: 2, str: 'Intermediate'},
-  {id: 3, str: 'Expert'},
+  {topic: 'ability', id: 1, str: 'Beginner' },
+  {topic: 'ability', id: 2, str: 'Intermediate'},
+  {topic: 'ability', id: 3, str: 'Expert'},
 ];

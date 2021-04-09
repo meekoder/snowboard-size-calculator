@@ -1,3 +1,8 @@
-<li *ngFor="let option of options">
-  <p>{{option.str}}</p>
-</li>
+<ul>
+  <li *ngFor="let option of options" (click)="onSelect(option)">
+    {{option.str}}
+  </li>
+</ul>
+<div *ngIf="selectedOption">
+  {{selectedOption.str}}
+</div>
