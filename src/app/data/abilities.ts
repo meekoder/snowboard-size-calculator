@@ -1,4 +1,4 @@
-import { Info } from './info';
+import { Info } from '../info';
 
 export const ABILITIES: Info[] = [
   {topic: 'ability', id: 1, str: 'Beginner' },

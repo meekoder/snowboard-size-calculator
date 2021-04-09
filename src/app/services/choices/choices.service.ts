@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Choices } from './button/choices';
-import { Info } from './info';
+import { Choices } from './choices';
+import { Info } from '../../info';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Info } from '../info';
-import { ButtonsService } from '../buttons.service';
+import { ButtonsService } from '../services/buttons/buttons.service';
 
 @Component({
   selector: 'app-height',

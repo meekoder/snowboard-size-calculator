@@ -1,6 +1,6 @@
 import { Component, Input, OnInit  } from '@angular/core';
 import { Info } from '../info';
-import { ChoicesService } from '../choices.service';
+import { ChoicesService } from '../services/choices/choices.service';
 
 @Component({
   selector: 'app-button',
