@@ -18,7 +18,7 @@ export class ButtonComponent implements OnInit {
 
   onSelect(option: Info): void {
     this.selectedOption = option;
-    this.choicesService.add(option.id);
+    this.choicesService.addChoice(option);
   }
 
 }
