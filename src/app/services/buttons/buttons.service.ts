@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Info } from '../../info';
 import { HEIGHTS } from '../../data/heights';
+import { WEIGHTS } from '../../data/weights';
 import { SHOESIZES } from '../../data/shoesizes';
 import { ABILITIES } from '../../data/abilities';
 import { GENDERS } from '../../data/genders';
@@ -16,6 +17,10 @@ export class ButtonsService {
     return HEIGHTS;
   }
 
+  getWeights(): Info[] {
+    return WEIGHTS;
+  }
+
   getShoeSizes(): Info[] {
     return SHOESIZES;
   }
@@ -23,6 +28,7 @@ export class ButtonsService {
   getGenders(): Info[] {
     return GENDERS;
   }
+
   getAbilities(): Info[] {
     return ABILITIES;
   }

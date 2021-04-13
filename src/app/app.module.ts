@@ -7,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { AbilityComponent } from './ability/ability.component';
 import { GenderComponent } from './gender/gender.component';
 import { ShoesizeComponent } from './shoesize/shoesize.component';
+import { WeightComponent } from './weight/weight.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ShoesizeComponent } from './shoesize/shoesize.component';
     AbilityComponent,
     GenderComponent,
     ShoesizeComponent,
+    WeightComponent,
   ],
   imports: [
     BrowserModule
