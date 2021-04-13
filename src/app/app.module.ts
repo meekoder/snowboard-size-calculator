@@ -8,6 +8,7 @@ import { AbilityComponent } from './ability/ability.component';
 import { GenderComponent } from './gender/gender.component';
 import { ShoesizeComponent } from './shoesize/shoesize.component';
 import { WeightComponent } from './weight/weight.component';
+import { StyleComponent } from './style/style.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { WeightComponent } from './weight/weight.component';
     GenderComponent,
     ShoesizeComponent,
     WeightComponent,
+    StyleComponent,
   ],
   imports: [
     BrowserModule
