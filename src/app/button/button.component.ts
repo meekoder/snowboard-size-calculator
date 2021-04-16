@@ -8,13 +8,12 @@ import { ChoicesService } from '../services/choices/choices.service';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input() options?: object;
+  @Input() options?: Info[];
   selectedOption?: Info;
 
   constructor(private choicesService: ChoicesService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSelect(option: Info): void {
     this.selectedOption = option;

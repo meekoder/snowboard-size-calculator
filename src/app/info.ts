@@ -3,3 +3,8 @@ export interface Info {
   id: number;
   str: string;
 }
+
+export interface Question {
+  topic: string;
+  options: Info[];
+}

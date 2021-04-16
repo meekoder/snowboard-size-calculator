@@ -4,8 +4,8 @@ import { HEIGHTS } from '../../data/heights';
 import { WEIGHTS } from '../../data/weights';
 import { SHOESIZES } from '../../data/shoesizes';
 import { GENDERS } from '../../data/genders';
-import { STYLES } from '../../data/styles';
 import { ABILITIES } from '../../data/abilities';
+import { STYLES } from '../../data/styles';
 
 @Injectable({
   providedIn: 'root'
@@ -30,11 +30,15 @@ export class ButtonsService {
     return GENDERS;
   }
 
+  getAbilities(): Info[] {
+    return ABILITIES;
+  }
+
   getStyles(): Info[] {
     return STYLES;
   }
 
-  getAbilities(): Info[] {
-    return ABILITIES;
+  getOptions(): Info[] {
+    return [...HEIGHTS, ...WEIGHTS, ...SHOESIZES, ...GENDERS, ...ABILITIES, ...STYLES];
   }
 }
