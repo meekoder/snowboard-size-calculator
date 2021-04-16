@@ -1,3 +1,5 @@
 <div *ngFor="let question of questions; let idx = index">
-  <app-question [idx]=idx+1 [topic]=question.topic [options]=question.options></app-question>
+  <div *ngIf="idx === viewService.viewIdx">
+    <app-question [idx]=idx [question]=question></app-question>
+  </div>
 </div>

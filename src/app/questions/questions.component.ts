@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from '../info';
 import { ButtonsService } from '../services/buttons/buttons.service';
+import { ViewService } from '../view.service';
 
 @Component({
   selector: 'app-questions',
@@ -9,18 +10,14 @@ import { ButtonsService } from '../services/buttons/buttons.service';
 })
 export class QuestionsComponent implements OnInit {
   questions: Question[] = [];
-  constructor(private buttonsService: ButtonsService) { }
+
+  constructor(private buttonsService: ButtonsService, public viewService: ViewService) {}
 
   ngOnInit(): void {
     const opts = this.buttonsService.getOptions();
-    const m: any = {};
-    opts.forEach(o => {
-      m[o.topic] = true;
-    });
-    const topics = Object.keys(m);
-    console.log(opts, topics);
+    const topics = this.buttonsService.getTopics();
     topics.forEach(t => {
-      this.questions.push({ topic: t, options: opts.filter(o => o.topic === t) });
+      this.questions.push({ topic: t, options: opts.filter(o => o.topicId === t.id) });
     });
   }
 

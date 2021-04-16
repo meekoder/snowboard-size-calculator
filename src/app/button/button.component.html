@@ -1,8 +1,18 @@
-<ul>
-  <li *ngFor="let option of options" (click)="onSelect(option)">
+<div *ngIf="type === 'dropdown';else normal">
+  <select (change)="onChange($event, topicQuestion)">
+    <option value="">--Please choose an option--</option>
+    <option *ngFor="let option of options" [value]=option.topicId>
     {{option.str}}
-  </li>
-</ul>
-<div *ngIf="selectedOption">
-  {{selectedOption.str}}
+    </option>
+  </select>
 </div>
+<ng-template #normal>
+  <ul>
+    <li *ngFor="let option of options" (click)="onSelect(option)">
+      {{option.str}}
+    </li>
+  </ul>
+  <div *ngIf="type === 'number'">
+    <input type="number" (change)="onChange($event, topicQuestion)" />
+  </div>
+</ng-template>

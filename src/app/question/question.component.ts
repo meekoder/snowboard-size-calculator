@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Info } from '../info';
+import { Question } from '../info';
+import { ViewService } from '../view.service';
 
 @Component({
   selector: 'app-question',
@@ -7,11 +8,15 @@ import { Info } from '../info';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-  @Input() topic?: string;
-  @Input() idx?: number;
-  @Input() options?: Info[] = [];
+  @Input() idx: number;
+  @Input() question?: Question;
 
-  ngOnInit(): void {}
+  constructor(private viewService: ViewService) {
+    this.idx = 0;
+  }
+
+  ngOnInit(): void {
+    console.log(this.question);
+  }
 
 }
-

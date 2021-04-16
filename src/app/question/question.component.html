@@ -1,2 +1,2 @@
-<h2>{{idx}}. What is your {{topic}}?</h2>
-<app-button [options]=options></app-button>
+<h2>{{idx+1}}. What is your {{question.topic.question}}?</h2>
+<app-button [topicQuestion]=question.topic.question [options]=question.options [type]=question.topic.type [idx]=idx></app-button>
