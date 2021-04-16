@@ -11,11 +11,14 @@ export class ViewService {
   }
 
   setIdx(idx: number): void {
-    console.log(idx)
     this.viewIdx = idx;
   }
 
-  getIdx(cb: any): void {
-    cb(this.viewIdx);
+  getIdx(): number {
+    return this.viewIdx;
   }
+
+  // getIdx(cb: any): void {
+  //   cb(this.viewIdx);
+  // }
 }

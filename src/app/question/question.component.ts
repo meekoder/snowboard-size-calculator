@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Question } from '../info';
-import { ViewService } from '../view.service';
 
 @Component({
   selector: 'app-question',
@@ -11,12 +10,10 @@ export class QuestionComponent implements OnInit {
   @Input() idx: number;
   @Input() question?: Question;
 
-  constructor(private viewService: ViewService) {
+  constructor() {
     this.idx = 0;
   }
 
-  ngOnInit(): void {
-    console.log(this.question);
-  }
+  ngOnInit(): void {}
 
 }
