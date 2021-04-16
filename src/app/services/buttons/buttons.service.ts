@@ -11,33 +11,6 @@ import { STYLES } from '../../data/styles';
   providedIn: 'root'
 })
 export class ButtonsService {
-
-  constructor() { }
-
-  getHeights(): Info[] {
-    return HEIGHTS;
-  }
-
-  getWeights(): Info[] {
-    return WEIGHTS;
-  }
-
-  getShoeSizes(): Info[] {
-    return SHOESIZES;
-  }
-
-  getGenders(): Info[] {
-    return GENDERS;
-  }
-
-  getAbilities(): Info[] {
-    return ABILITIES;
-  }
-
-  getStyles(): Info[] {
-    return STYLES;
-  }
-
   getOptions(): Info[] {
     return [...HEIGHTS, ...WEIGHTS, ...SHOESIZES, ...GENDERS, ...ABILITIES, ...STYLES];
   }
