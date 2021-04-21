@@ -1,4 +1,4 @@
-<div *ngIf="type === 'dropdown';else normal">
+<div class="dropdown" *ngIf="type === 'dropdown';else normal">
   <select (change)="onChange($event, topicQuestion)">
     <option value="">--Please choose an option--</option>
     <option *ngFor="let option of options" [value]=option.topicId>
@@ -12,7 +12,7 @@
       {{option.str}}
     </li>
   </ul>
-  <div *ngIf="type === 'number'">
-    <input type="number" (change)="onChange($event, topicQuestion)" />
+  <div class="textbox" *ngIf="type === 'number'">
+    <input type="number" (change)="onChange($event, topicQuestion)" min="90" max="270" />lbs
   </div>
 </ng-template>

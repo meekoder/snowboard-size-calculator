@@ -1,6 +1,6 @@
 <div *ngFor="let question of questions; let idx = index">
   <div *ngIf="idx === viewService.viewIdx">
-    <app-progress [idx]=idx [length]=questions.length></app-progress>
+    <app-progress [idx]=idx [length]=questions.length [question]=question></app-progress>
     <app-question [idx]=idx [question]=question></app-question>
   </div>
 </div>

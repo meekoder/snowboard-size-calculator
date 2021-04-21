@@ -1,2 +1,9 @@
-<label for="progress">{{idx}} of {{length}}</label>
-<progress id="progress" [value]=idx [max]=6>0%</progress>
+<div>
+  <img src="{{iconPath}}" />
+  <div class="bar">
+    <svg>
+      <circle [ngStyle]="{'stroke-dashoffset': idx * 100}" cx="50%" cy="50%" r="50%"></circle>
+    </svg>
+  </div>
+</div>
+<p>{{idx}} of {{length}}</p>

@@ -54,7 +54,7 @@ export class ButtonsService {
     return [
       {question: 'gender', type: '', id: 1},
       {question: 'shoesize', type: 'dropdown', id: 2},
-      {question: 'height', type: '', id: 3},
+      {question: 'height', type: 'dropdown', id: 3},
       {question: 'weight', type: 'number', id: 4},
       {question: 'ability', type: '', id: 5},
       {question: 'style', type: '', id: 6},
