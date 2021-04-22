@@ -7,12 +7,12 @@
   </select>
 </div>
 <ng-template #normal>
+  <div class="textbox" *ngIf="type === 'number'">
+    <input type="number" (change)="onChange($event, topicQuestion)" min="90" max="270" />lbs
+  </div>
   <ul>
     <li *ngFor="let option of options" (click)="onSelect(option)">
       {{option.str}}
     </li>
   </ul>
-  <div class="textbox" *ngIf="type === 'number'">
-    <input type="number" (change)="onChange($event, topicQuestion)" min="90" max="270" />lbs
-  </div>
 </ng-template>
