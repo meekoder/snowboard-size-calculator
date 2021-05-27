@@ -26,7 +26,6 @@
 svg {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 svg circle {
@@ -35,9 +34,19 @@ svg circle {
   transform-origin: center;
   fill: none;
   stroke: #464646;
-  stroke-width: 30px;
+  stroke-width: 40px;
   stroke-dasharray: 630;
-  animation: 3.5s ease-in-out, appear 2s;
+  --calcOffsetA: calc(var(--offsetA) * 100);
+  stroke-dashoffset: var(--calcOffsetA);
+  transform: rotate(-90deg);
+  animation: progress 1s;
+}
+
+@keyframes progress {
+  from {
+    --calcOffset: calc(var(--offset) * 100);
+    stroke-dashoffset: var(--calcOffset);
+  }
 }
 
 img {
@@ -46,4 +55,34 @@ img {
   transform: translate(140%, 140%);
   height: 5em;
   width: 5em;
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }

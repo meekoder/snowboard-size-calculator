@@ -47,7 +47,7 @@ export class ButtonsService {
       {topicId: 6, id: 1, str: 'Freestyle' },
       {topicId: 6, id: 2, str: 'Freeride'},
       {topicId: 6, id: 3, str: 'All Mountain'},
-    ]
+    ];
   }
 
   getTopics(): Topic[] {

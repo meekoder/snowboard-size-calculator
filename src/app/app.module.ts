@@ -7,6 +7,10 @@ import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ProgressComponent } from './progress/progress.component';
 
+import { ViewService } from './view.service';
+import { ChoicesService } from './services/choices/choices.service';
+import { ButtonsService } from './services/buttons/buttons.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,11 @@ import { ProgressComponent } from './progress/progress.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ViewService,
+    ChoicesService,
+    ButtonsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
